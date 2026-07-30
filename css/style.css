@@ -257,6 +257,7 @@ body{
     flex-direction: column;
     align-items: center;
     border: #B5B9F0 2px solid;
+    transition: transform 0.5s ease-in-out;
 
 }
 .foto .card img{
@@ -264,8 +265,8 @@ body{
     width: 100%;
     max-width: 400px;
     border-bottom: black 3px solid;
-    transition: transform 0.5s ease-in-out;
     z-index: 1;
+    pointer-events:none;
 }
 .foto .card p{
     font-size: x-large;
@@ -277,8 +278,8 @@ body{
     display: flex;
     justify-content: center;
 }
-.foto .card img:hover{
-    transform: scale(1.1);
+.foto .card:hover{
+    transform: scale(1.01);
 }/* Tambahkan media queries di bagian paling bawah */
 
 /* Untuk tablet dan layar sedang */
