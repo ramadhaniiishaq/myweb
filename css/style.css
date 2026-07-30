@@ -279,4 +279,286 @@ body{
 }
 .foto .card img:hover{
     transform: scale(1.1);
+}/* Tambahkan media queries di bagian paling bawah */
+
+/* Untuk tablet dan layar sedang */
+@media screen and (max-width: 1024px) {
+    body {
+        min-width: auto;
+        padding: 10px;
+    }
+
+    .header {
+        height: auto;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .header-l {
+        width: 100%;
+        max-width: 400px;
+        gap: 15px;
+        padding: 8px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .hero .hero-font {
+        font-size: x-large;
+        width: 100%;
+    }
+
+    .hero .hero-font .hero-text {
+        max-width: 100%;
+        font-size: small;
+    }
+
+    .hero .hero-font a {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px auto;
+    }
+
+    .hero .hero-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .crausel {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 5px;
+    }
+
+    .crausel .card {
+        width: 150px;
+        height: 200px;
+    }
+
+    .foto {
+        justify-content: center;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .foto .card {
+        width: 200px;
+        min-width: 150px;
+        flex: 1 1 200px;
+        height: auto; /* Tambahkan ini */
+        min-height: 250px; /* Tambahkan ini */
+    }
+
+    .foto .card p {
+        font-size: large; /* Perbaiki ukuran font */
+        padding: 15px; /* Tambahkan padding */
+        margin: 0; /* Tambahkan ini */
+        width: 100%;
+        text-align: center; /* Buat teks rata tengah */
+        background: rgba(11, 9, 9, 0.5); /* Tambahkan background agar terbaca */
+        border-radius: 0 0 15px 15px; /* Tambahkan border radius */
+    }
+
+    .foters {
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .keahlian {
+        font-size: x-large;
+        margin-left: 10px;
+    }
+}
+/* KHUSUS UNTUK HANDPHONE SAJA */
+@media screen and (max-width: 768px) {
+    /* Reset semua yang mempengaruhi card foto */
+    .foto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+        gap: 20px;
+    }
+
+    .foto .card {
+        width: 100% !important;
+        max-width: 220px !important;
+        min-width: auto !important;
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important; /* Kunci utama: biarkan konten terlihat */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        background: linear-gradient(135deg, #2E4540, #408175, #0B0909) !important;
+        border-radius: 15px !important;
+        border: 2px solid #B5B9F0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        position: relative !important;
+    }
+
+    .foto .card img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 250px !important;
+        object-fit: cover !important;
+        border-bottom: 3px solid black !important;
+        border-radius: 13px 13px 0 0 !important;
+        display: block !important;
+        transition: transform 0.5s ease-in-out !important;
+    }
+
+    .foto .card img:hover {
+        transform: scale(1.05) !important;
+    }
+
+    .foto .card p {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 10 !important;
+        background: rgba(11, 9, 9, 0.85) !important;
+        color: whitesmoke !important;
+        font-size: 18px !important;
+        font-weight: bold !important;
+        padding: 15px 10px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+        border-radius: 0 0 13px 13px !important;
+        min-height: 50px !important;
+        line-height: 1.5 !important;
+        border-top: 1px solid #B5B9F0 !important;
+        box-sizing: border-box !important;
+        pointer-events: auto !important;
+    }
+
+    /* Perbaikan untuk card di crausel */
+    .crausel {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        padding: 10px 5px !important;
+    }
+
+    .crausel .card {
+        width: 140px !important;
+        height: 180px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Perbaikan header untuk HP */
+    .header {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 10px !important;
+        gap: 10px !important;
+    }
+
+    .header-h {
+        font-size: 20px !important;
+        text-align: start !important;
+        width: 100% !important;
+    }
+
+    .header-l {
+        width: 100% !important;
+        max-width: 420px !important;
+        gap: 8px !important;
+        padding: 8px 10px !important;
+        border-radius: 30px !important;
+        flex-wrap: wrap !important;
+        justify-content: start !important;
+        padding-left: 10px;
+    }
+
+    .header-l li {
+        font-size: 13px !important;
+    }
+
+    /* Perbaikan hero untuk HP */
+    .hero {
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: 450px !important;
+        padding: 20px 15px !important;
+        gap: 20px !important;
+    }
+
+    .hero .hero-font {
+        font-size: 20px !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .hero .hero-font h1 {
+        font-size: 24px !important;
+    }
+
+    .hero .hero-font .hero-text {
+        font-size: 14px !important;
+        text-align: center !important;
+        padding: 0 5px !important;
+    }
+
+    .hero .hero-font a {
+        max-width: 180px !important;
+        font-size: 14px !important;
+        padding: 10px !important;
+        margin: 10px auto !important;
+    }
+
+    .hero .hero-image {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    /* Perbaikan keahlian */
+    .keahlian {
+        font-size: 22px !important;
+        text-align: center !important;
+        margin: 20px 10px 10px 10px !important;
+        padding: 5px !important;
+    }
+
+    /* Perbaikan footer */
+    .foters {
+        flex-direction: column !important;
+        padding: 15px !important;
+        gap: 10px !important;
+        text-align: center !important;
+    }
+
+    .footer-links {
+        gap: 12px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+
+    .footer-links li a {
+        font-size: 13px !important;
+        margin-left: 5px !important;
+    }
 }
